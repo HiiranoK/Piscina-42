@@ -1,13 +1,18 @@
 NAME    = programa
 CC      = gcc
-CFLAGS  = -Wall -Wextra -Werror
+CFLAGS  = -Wall -Wextra -Werror -I
 RM      = rm -f
 
-# Adicione aqui os arquivos .c que você criar
-SRCS    = ft_strlen.c
+# Busca todos os arquivos .c e o header .h
+SRCS    = $(wildcard *.c)
+DEPS    = ft.h
 OBJS    = $(SRCS:.c=.o)
 
 all: $(NAME)
+
+# A regra de compilação agora depende de $(DEPS)
+%.o: %.c $(DEPS)
+	$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME): $(OBJS)
 	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
@@ -21,3 +26,4 @@ fclean: clean
 re: fclean all
 
 .PHONY: all clean fclean re
+
