@@ -5,7 +5,7 @@ RM      = rm -f
 
 SRCS    = $(wildcard *.c)
 OBJS    = $(SRCS:.c=.o)
-DEPS    = ft.h
+DEPS    = $(wildcard *.h)
 
 all: $(NAME)
 
