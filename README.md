@@ -18,26 +18,30 @@ Siga estes passos no seu terminal:
     ```Bash
         source ~/.zshrc
     ```
-## O está incluído?
-**1. Aliases de Terminal**
-    * **m re:** Compila o projeto usando o Makefile central do repositório.
-    * **mrun:** Compila, executa o ./programa e limpa os objetos.
-    * **mclean:** Executa o make clean na pasta atual.
-    * **val:** Atalho para o Valgrind com check de vazamento de memória (--leak-check=full).
+## 🛠️ O que está incluído?
 
-**2. Configurações do Vim**
-    * Histórico de Undo persistente (mesmo após fechar o arquivo).
-    * Gerenciamento automático de arquivos de Swap e Backup na pasta ~/.vim/.
-    * Atalhos rápidos para gerenciamento de buffers e janelas.
+### 1. Aliases de Terminal
+* **m**: Atalho que executa o Makefile central localizado em `~/dotfiles`. (evita Makefile em cada pasta)
+* **mrun**: Compila, executa o `./programa` aceita args.
+* **mclean**: Limpa .o
+* **mfclean** Limpa .o e o binário `./programa`.
+* **val**: Atalho para o Valgrind com `--leak-check=full` para encontrar memory leaks.
+* **norm**: Atalho para `normanitte -R CheckForbiddenSourceHeader`
+* **cc42**: Atalho para `cc -Wall -Wextra -Werror"`
 
-**3. Makefile Mestre**
-    * Compilação automática de todos os arquivos .c da pasta atual usando wildcard.
-    * Flags de erro da 42 inclusas: -Wall -Wextra -Werror.
 
-**4. Gitignore Global**
+### 2. Configurações do Vim
+* **Undo persistente**: Undo funciona mesmo após fechar o arquivo.
+* **Gestão de Swap**: Arquivos temporários do Vim ficam organizados em `~/.vim/`.
+* **Comando :T**: Abre um terminal vertical dentro do Vim para agilizar testes.
+
+### 3. Makefile Mestre
+* Compilação automática via wildcard.
+* Flags obrigatórias: `-Wall -Wextra -Werror`.
+
+### 4. Gitignore Global
 Bloqueia automaticamente arquivos lixo (.o, a.out, arquivos de swap do Vim) em todos os seus repositórios.
 
 
-**5. Bonus**
-
+### 5. Bonus
 [Meu notion sobre C](https://www.notion.so/C-Um-Resumo-2417f19370428031a9b0e64e2f76f47f)
