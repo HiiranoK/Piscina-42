@@ -1,0 +1,13 @@
+# Compilados e executáveis
+*.o
+*.a
+*.out
+programa
+
+# Arquivos temporários do Vim
+*.swp
+*.swo
+*~
+
+# Pastas de sistema
+.DS_Store
