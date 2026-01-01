@@ -1,25 +1,29 @@
 NAME    = programa
 CC      = cc
-CFLAGS  = -Wall -Wextra -Werror -I.
-RM      = rm -f
+CFLAGS  = -Wall -Wextra -Werror
 
-SRCS    = $(wildcard *.c)
+# Na 42, você DEVE listar os arquivos um a um.
+# Dica: No Vim, use :r !ls *.c para colá-los aqui rapidamente.
+SRCS    = ft_strlen.c \
+          ft_putstr.c \
+          main.c
+
 OBJS    = $(SRCS:.c=.o)
-DEPS    = $(wildcard *.h)
 
 all: $(NAME)
-
-%.o: %.c $(DEPS)
-	$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME): $(OBJS)
 	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 
+# Regra para evitar o relink (verifica data do .c vs .o)
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
+
 clean:
-	$(RM) $(OBJS)
+	rm -f $(OBJS)
 
 fclean: clean
-	$(RM) $(NAME)
+	rm -f $(NAME)
 
 re: fclean all
 
