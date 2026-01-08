@@ -3,6 +3,9 @@
 *.a
 *.out
 programa
+program
+test
+main.c
 
 # Arquivos temporários do Vim
 *.swp

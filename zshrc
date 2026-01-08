@@ -17,7 +17,7 @@ alias mrun="m re && ./$P42"
 # Copia o arquivo Makefile para o diretório atual
 alias cpmf="cp ~/dotfiles/Makefile ./"
 
-# Limpeza local [cite: 162]
+# Limpeza local 
 alias mclean="m clean"
 alias mfclean="m fclean"
 
