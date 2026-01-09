@@ -6,18 +6,23 @@ Este repositório contém meu ambiente de desenvolvimento configurado para a Pis
 
 Siga estes passos no seu terminal:
 
-1. **Clonar o repositório:**
+0. **(OPCIONAL):** -
+    siga as etapas presentes [neste link](https://github.com/novaspirit/pimpyourterm) para "tunar" seu terminal usando o zsh.
+
+3. **Clonar o repositório:**
    ```Bash
        git clone https://github.com/HiiranoK/dotfiles.git ~/dotfiles
-2. **Executar a instalação**
+4. **Executar a instalação**
    ```Bash
       chmod +x install.sh
       ./install.sh
       cd ~/dotfiles
-3. **Recarregar as configurações:**
+5. **Recarregar as configurações:**
     ```Bash
         source ~/.zshrc
     ```
+    obs: os alias (atalhos) estão configurados para o zsh (zero shell).
+   
 ## 🛠️ O que está incluído?
 
 ### 1. Aliases de Terminal
@@ -34,6 +39,7 @@ Siga estes passos no seu terminal:
 * **Undo persistente**: Undo funciona mesmo após fechar o arquivo.
 * **Gestão de Swap**: Arquivos temporários do Vim ficam organizados em `~/.vim/`.
 * **Comando :T**: Abre um terminal vertical dentro do Vim para agilizar testes.
+* **Comando (Visual) Ç**: Conta o total de linhas entre o abrir e o fechar chaves.
 
 ### 3. Makefile Mestre
 * Compilação automática via wildcard.
@@ -41,6 +47,7 @@ Siga estes passos no seu terminal:
 
 ### 4. Gitignore Global
 Bloqueia automaticamente arquivos lixo (.o, a.out, arquivos de swap do Vim) em todos os seus repositórios.
+Ignora arquivos main.c e a.out, teste, program, program - (normalmente usados para debug.)
 
 
 ### 5. Bonus
