@@ -27,3 +27,10 @@ alias norm="norminette -R CheckForbiddenSourceHeader"
 alias cc42="cc -Wall -Wextra -Werror"
 # --- CUSTOMIZAÇÕES EXTRAS ---
 export EDITOR="vim"
+
+# --- Add alis 
+unalias run-help
+autoload run-help
+HELPDIR=/usr/share/zsh/"${ZSH_VERSION}"/help
+alias help=run-help
+
