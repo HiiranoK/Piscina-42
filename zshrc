@@ -29,7 +29,7 @@ alias cc42="cc -Wall -Wextra -Werror"
 export EDITOR="vim"
 
 # --- Add alis 
-unalias run-help
+alias run-help
 autoload run-help
 HELPDIR=/usr/share/zsh/"${ZSH_VERSION}"/help
 alias help=run-help
