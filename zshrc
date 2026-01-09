@@ -26,5 +26,4 @@ alias val="valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes 
 alias norm="norminette -R CheckForbiddenSourceHeader"
 alias cc42="cc -Wall -Wextra -Werror"
 # --- CUSTOMIZAÇÕES EXTRAS ---
-# Você pode adicionar cores ou um prompt customizado aqui se quiser no futuro
 export EDITOR="vim"
