@@ -79,7 +79,8 @@ set termguicolors
 set background=dark
 
 " Carrega o tema
-colorscheme birds-of-paradise
+"colorscheme birds-of-paradise
+colorscheme gruvbox
 
 " --- AJUSTES DE TRANSPARÊNCIA E CORES ---
 " Estes comandos devem vir DEPOIS do colorscheme, pois o tema costuma resetar o fundo
